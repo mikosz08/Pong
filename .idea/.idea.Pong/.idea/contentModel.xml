@@ -14,10 +14,12 @@
             <e p="_README.txt" t="Include" />
           </e>
         </e>
+        <e p="RestartGame.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="BallAudio.cs" t="Include" />
           <e p="BallManager.cs" t="Include" />
           <e p="BoundsUtilities.cs" t="Include" />
+          <e p="ButtonController.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="PlayTrack.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />

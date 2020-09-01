@@ -9,9 +9,11 @@ public class Timer : MonoBehaviour{
     [SerializeField] private bool timerRuns;
     [SerializeField] private bool stopperRuns;
 
+    private float minutes = 0;
+    
     private void Start(){
         if (stopperRuns) {
-            timeRemaining = 0;
+            timeRemaining = 55;
         }
     }
 
@@ -47,18 +49,23 @@ public class Timer : MonoBehaviour{
         }
         else {
             print( "Round Ends!" );
-            timeText.text = "00:00:00";
+            timeText.text = "00:00:000";
             timeRemaining = 0;
             timerRuns = false;
         }
     }
 
     private void DisplayTime( float timeToDisplay ){
-        float minutes = Mathf.FloorToInt( timeToDisplay / 60.0f );
+        if (timeRemaining>= 60) {
+            timeRemaining = 0;
+            this.minutes++;
+        }
+       // float minutes = Mathf.FloorToInt( timeToDisplay / 60.0f );
         float seconds = Mathf.FloorToInt( timeToDisplay % 60.0f );
         var millis = ( timeToDisplay - seconds ) * 100;
-
+        
+        
         //timeText.text = string.Format( "{0:00}:{1:00}", seconds, millis );
-        timeText.text = $"{minutes:00}:{seconds:00}:{millis:00}";
+        timeText.text = $"{minutes:00}:{seconds:00}:{millis:000}";
     }
 }
