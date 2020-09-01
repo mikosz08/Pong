@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 16
-  boundaryOffset: 1
 --- !u!54 &963002338
 Rigidbody:
   m_ObjectHideFlags: 0
