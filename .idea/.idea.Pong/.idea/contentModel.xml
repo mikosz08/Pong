@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ziole\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ziole\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Pong.834469040.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ziole\OneDrive\WORK_SPACE_DATABASE\UNITY\UNITY LEARN\Pong" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Allsky" t="Include">
+          <e p="allsky_readme.txt" t="Include" />
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="Pixel Font - Tripfive" t="Include">
+            <e p="_README.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="BallAudio.cs" t="Include" />
+          <e p="BallManager.cs" t="Include" />
+          <e p="BoundsUtilities.cs" t="Include" />
+          <e p="PlayerManager.cs" t="Include" />
+          <e p="PlayTrack.cs" t="Include" />
+          <e p="ScoreManager.cs" t="Include" />
+          <e p="StartGame.cs" t="Include" />
+          <e p="Timer.cs" t="Include" />
+          <e p="UltraAI.cs" t="Include" />
+        </e>
+        <e p="spritefont_and_other" t="Include">
+          <e p="document_and_picturelist" t="Include">
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Pong.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
