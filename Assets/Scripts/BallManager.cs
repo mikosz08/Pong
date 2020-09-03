@@ -6,15 +6,23 @@ using Random = UnityEngine.Random;
 public class BallManager : MonoBehaviour{
     [SerializeField] private float ballSpeed;
     [SerializeField] private GameObject ballPrefab;
-    [SerializeField] private float obliquePower; // the power that describes how big an angle should be when hitting a wall/player etc.
+
+    [SerializeField]
+    private float obliquePower; // the power that describes how big an angle should be when hitting a wall/player etc.
+
     private ScoreManager _scoreManager;
-    private Rigidbody ballBody;
+    private HealthManager _healthManager;
+    private GameInitializer _gameInitializer;
+    
+    private Rigidbody _ballBody;
     private float _upBoundPosY;
     private float _downBoundPosY;
 
     private void Awake(){
         _scoreManager = GameObject.Find( "ScoreManager" ).GetComponent<ScoreManager>();
-        ballBody = GetComponent<Rigidbody>();
+        _healthManager = GameObject.Find( "HealthManager" ).GetComponent<HealthManager>();
+        _gameInitializer = GameObject.Find( "GameManager" ).GetComponent<GameInitializer>();
+        _ballBody = GetComponent<Rigidbody>();
     }
 
     // Start is called before the first frame update
@@ -27,10 +35,10 @@ public class BallManager : MonoBehaviour{
         var direction = Random.Range( 0, 2 );
         switch (direction) {
             case 0:
-                ballBody.AddForce( new Vector2( ballSpeed, 0 ), ForceMode.Impulse );
+                _ballBody.AddForce( new Vector2( ballSpeed, 0 ), ForceMode.Impulse );
                 break;
             case 1:
-                ballBody.AddForce( new Vector2( -ballSpeed, 0 ), ForceMode.Impulse );
+                _ballBody.AddForce( new Vector2( -ballSpeed, 0 ), ForceMode.Impulse );
                 break;
         }
     }
@@ -43,10 +51,22 @@ public class BallManager : MonoBehaviour{
         }
 
         if (hit.gameObject.tag.Equals( "Goal" )) {
+            ManageHearts( hit );
             ManagePoints( hit );
             ResetBall();
         }
     }
+
+
+    //Remove hearts and end game eventually.
+    private void ManageHearts( Collision hit ){
+        if (!hit.gameObject.name.Equals( "Left" )) return;
+        _healthManager.RemoveHeart();
+        if (_healthManager.LastHeartIndex < 0) {
+            _gameInitializer.StopGame();
+        }
+    }
+
 
     //Add or Subtract points:
     private void ManagePoints( Collision hit ){
@@ -62,10 +82,10 @@ public class BallManager : MonoBehaviour{
     private void BounceTheBall( float direction, Collision hit ){
         switch (hit.gameObject.name) {
             case "Player":
-                ballBody.velocity = new Vector2( ballSpeed, direction * obliquePower );
+                _ballBody.velocity = new Vector2( ballSpeed, direction * obliquePower );
                 break;
             case "Opponent":
-                ballBody.velocity = new Vector2( -ballSpeed, direction * obliquePower );
+                _ballBody.velocity = new Vector2( -ballSpeed, direction * obliquePower );
                 break;
         }
     }

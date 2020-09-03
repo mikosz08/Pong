@@ -8,12 +8,12 @@ public class Timer : MonoBehaviour{
     [SerializeField] private Text timeText;
     [SerializeField] private bool timerRuns;
     [SerializeField] private bool stopperRuns;
+    private string _playerTime;
+    private float _minutes = 0;
 
-    private float minutes = 0;
-    
     private void Start(){
         if (stopperRuns) {
-            timeRemaining = 55;
+            timeRemaining = 0;
         }
     }
 
@@ -32,7 +32,6 @@ public class Timer : MonoBehaviour{
     private void StopperStart(){
         if (timeRemaining < stopperLimit) {
             timeRemaining += Time.deltaTime;
-            print( timeRemaining );
             DisplayTime( timeRemaining );
         }
         else {
@@ -56,16 +55,22 @@ public class Timer : MonoBehaviour{
     }
 
     private void DisplayTime( float timeToDisplay ){
-        if (timeRemaining>= 60) {
+        if (timeRemaining >= 60) {
             timeRemaining = 0;
-            this.minutes++;
+            this._minutes++;
         }
-       // float minutes = Mathf.FloorToInt( timeToDisplay / 60.0f );
+
+        // float minutes = Mathf.FloorToInt( timeToDisplay / 60.0f );
         float seconds = Mathf.FloorToInt( timeToDisplay % 60.0f );
         var millis = ( timeToDisplay - seconds ) * 100;
-        
-        
+
         //timeText.text = string.Format( "{0:00}:{1:00}", seconds, millis );
-        timeText.text = $"{minutes:00}:{seconds:00}:{millis:000}";
+        _playerTime = $"{_minutes:00}:{seconds:00}:{millis:000}";
+        timeText.text = _playerTime;
     }
+
+    public string GetPlayerTime(){
+        return _playerTime;
+    }
+    
 }
