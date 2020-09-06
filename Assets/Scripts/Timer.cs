@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour{
     private void DisplayTime( float timeToDisplay ){
         if (timeRemaining >= 60) {
             timeRemaining = 0;
-            this._minutes++;
+            _minutes++;
         }
 
         // float minutes = Mathf.FloorToInt( timeToDisplay / 60.0f );

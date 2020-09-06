@@ -14,8 +14,7 @@ public class ButtonController : MonoBehaviour
     }
     
     //QUIT GAME
-    private void QuitApp(){
-       
+    public static void QuitApp(){
         Application.Quit();
     }
     

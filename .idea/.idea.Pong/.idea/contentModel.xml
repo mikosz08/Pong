@@ -9,6 +9,7 @@
         <e p="Allsky" t="Include">
           <e p="allsky_readme.txt" t="Include" />
         </e>
+        <e p="DifficultyManager.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Pixel Font - Tripfive" t="Include">
             <e p="_README.txt" t="Include" />

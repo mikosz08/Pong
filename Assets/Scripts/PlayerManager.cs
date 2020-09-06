@@ -5,7 +5,6 @@ public class PlayerManager : MonoBehaviour{
     [SerializeField] private float speed = 15.0f;
     private BoundsUtilities _boundsUtilities;
 
-
     private void Awake(){
         _boundsUtilities = GameObject.Find( "Table" ).GetComponent<BoundsUtilities>();
     }
@@ -25,4 +24,9 @@ public class PlayerManager : MonoBehaviour{
         //Move:
         transform.position = new Vector3( transform.position.x, posY, transform.position.z );
     }
+    
+    public void IncreaseSpeed(float boost){
+        speed += boost;
+    }
+    
 }
