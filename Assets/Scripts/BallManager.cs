@@ -18,6 +18,11 @@ public class BallManager : MonoBehaviour{
     private float _upBoundPosY;
     private float _downBoundPosY;
 
+    public float BallSpeed {
+        get => ballSpeed;
+        set => ballSpeed = value;
+    }
+
     private void Awake(){
         _scoreManager = GameObject.Find( "ScoreManager" ).GetComponent<ScoreManager>();
         _healthManager = GameObject.Find( "HealthManager" ).GetComponent<HealthManager>();
@@ -95,4 +100,9 @@ public class BallManager : MonoBehaviour{
         Destroy( gameObject );
         LaunchBall();
     }
+    
+    public void IncreaseSpeed(float boost){
+        ballSpeed += boost;
+    }
+    
 }

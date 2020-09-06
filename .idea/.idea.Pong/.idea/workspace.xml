@@ -21,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BoundsUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BallManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayTrack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DifficultyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -34,21 +35,22 @@
         <option value="$PROJECT_DIR$/Assets/UltraAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoundaryUtility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoundsUtilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UltraAI.cs" />
         <option value="$PROJECT_DIR$/Assets/StartGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayTrack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StartGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BallManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CONSTANTS.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInitializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BallManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/DifficultyManager.cs" />
       </list>
     </option>
   </component>
@@ -101,6 +103,7 @@
       <workItem from="1598910083847" duration="3264000" />
       <workItem from="1598923781456" duration="4415000" />
       <workItem from="1599079829618" duration="12324000" />
+      <workItem from="1599370931543" duration="6288000" />
     </task>
     <servers />
   </component>
@@ -127,6 +130,10 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1049" y="339" key="#Notifications/0.0.2560.1410/2560.232.1920.1050@0.0.2560.1410" timestamp="1599090062838" />
+    <state x="3324" y="431" key="RiderGenerateDialog" timestamp="1599375318736">
+      <screen x="2560" y="232" width="1920" height="1050" />
+    </state>
+    <state x="3324" y="431" key="RiderGenerateDialog/0.0.2560.1410/2560.232.1920.1050@2560.232.1920.1050" timestamp="1599375318736" />
     <state x="958" y="323" key="SettingsEditor" timestamp="1599086032166">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>

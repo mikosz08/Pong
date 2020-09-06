@@ -64,6 +64,7 @@ public class GameInitializer : MonoBehaviour{
         Time.timeScale = 1;
         _ball.gameObject.GetComponent<MeshRenderer>().enabled = true;
         _ball.gameObject.GetComponent<TrailRenderer>().enabled = true;
+        _timer.GetComponent<Timer>().enabled = true;
     }
 
     public void StopGame(){
